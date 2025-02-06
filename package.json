@@ -1,0 +1,19 @@
+{
+  "name": "validate-form-fields",
+  "version": "1.0.0",
+  "description": "A lightweight, zero-dependency JavaScript/TypeScript library for validating form inputs with customisable rules. Supports length limits, alphanumeric enforcement, HTML blocking, and more.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Gary Davison",
+  "license": "MIT",
+  "homepage": "https://github.com/garydavisonos/validate-form-fields#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garydavisonos/validate-form-fields.git"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
