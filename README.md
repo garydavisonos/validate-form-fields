@@ -5,6 +5,7 @@ A lightweight, zero-dependency JavaScript/TypeScript library for validating form
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [TODO](#todo)
 - [License](#license)
 
 ## Installation
@@ -19,7 +20,7 @@ npm install validate-form-fields
 
 Basic examples:
 
-```React 
+```JavaScript 
 import  { ValidateFormFields } from 'validate-form-fields';
 
   useEffect(() => {
@@ -51,6 +52,10 @@ if (input){
 }
 
 ```
+
+## License
+
+Fix failed Jest tests.
 
 ## License
 
