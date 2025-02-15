@@ -5,7 +5,6 @@ A lightweight, zero-dependency JavaScript/TypeScript library for validating form
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [TODO](#todo)
 - [License](#license)
 
 ## Installation
@@ -52,10 +51,6 @@ if (input){
 }
 
 ```
-
-## TODO
-
-Fix failed Jest tests.
 
 ## License
 
