@@ -37,7 +37,7 @@ export class ValidateFormFields {
     }
 
     if (maxLength && trimmedInput.length > maxLength) {
-      return `Input cannot be longer than ${maxLength} characters.`;
+      return `Input must be no more than ${maxLength} characters.`;
     }
 
     if (allowAlphanumericOnly) {

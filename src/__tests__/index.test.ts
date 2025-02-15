@@ -15,23 +15,23 @@ describe('ValidateFormFields', () => {
   test('should validate input text with minLength', () => {
     const options: ValidationOptions = { minLength: 5 };
     const errorMessage = ValidateFormFields.validateInputText('abc', options);
-    expect(errorMessage).toBe('Input must be at least 5 characters long.');
+    expect(errorMessage).toBe('Input must be at least 5 characters.');
   });
 
   test('should validate input text with maxLength', () => {
     const options: ValidationOptions = { maxLength: 5 };
     const errorMessage = ValidateFormFields.validateInputText('abcdef', options);
-    expect(errorMessage).toBe('Input must be no more than 5 characters long.');
+    expect(errorMessage).toBe('Input must be no more than 5 characters.');
   });
 
   test('should validate input text with allowAlphanumericOnly', () => {
     const options: ValidationOptions = { allowAlphanumericOnly: true };
     const errorMessage = ValidateFormFields.validateInputText('abc@123', options);
-    expect(errorMessage).toBe('Input can only contain alphanumeric characters.');
+    expect(errorMessage).toBe('Input must only contain letters, numbers, hyphens (-), or underscores (_).');
   });
 
   test('should validate input text with blockHTML', () => {
-    const options: ValidationOptions = { blockHTML: true };
+    const options: ValidationOptions = { blockHTML: true, allowAlphanumericOnly: false };
     const errorMessage = ValidateFormFields.validateInputText('<div>', options);
     expect(errorMessage).toBe('Input cannot contain HTML characters like <, >, &, ", \', or /.');
   });
@@ -47,7 +47,7 @@ describe('ValidateFormFields', () => {
     ValidateFormFields.attachValidation(inputElement, options);
     inputElement.value = 'abc';
     inputElement.dispatchEvent(new Event('input'));
-    expect(inputElement.validationMessage).toBe('Input must be at least 5 characters long.');
+    expect(inputElement.validationMessage).toBe('Input must be at least 5 characters.');
   });
 
   test('should validate multiple fields with a selector', () => {
@@ -64,8 +64,8 @@ describe('ValidateFormFields', () => {
     inputElement.dispatchEvent(new Event('input'));
     inputElement2.dispatchEvent(new Event('input'));
 
-    expect(inputElement.validationMessage).toBe('Input must be at least 5 characters long.');
-    expect(inputElement2.validationMessage).toBe('Input must be at least 5 characters long.');
+    expect(inputElement.validationMessage).toBe('Input must be at least 5 characters.');
+    expect(inputElement2.validationMessage).toBe('Input must be at least 5 characters.');
 
     document.body.removeChild(inputElement2);
   });
