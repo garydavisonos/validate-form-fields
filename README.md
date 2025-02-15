@@ -1,9 +1,13 @@
 # Validation Form Fields
 A lightweight, zero-dependency JavaScript/TypeScript library for validating form inputs with customisable rules. Supports length limits, alphanumeric enforcement, HTML blocking, and more.
 
-## Table of Contents
+![Code Quality](https://github.com/garydavisonos/validation-form-fields/actions/workflows/code.quality.yml/badge.svg)
+![Publish to npm](https://github.com/garydavisonos/validation-form-fields/actions/workflows/publish.yml/badge.svg)
+![Version](https://img.shields.io/npm/v/validation-form-fields)
+![ESLint](https://img.shields.io/badge/code%20style-eslint-brightgreen)
+![TypeScript](https://img.shields.io/badge/language-typescript-blue)
 
-- [Installation](#installation)
+## Table of Contents- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 
