@@ -6,7 +6,7 @@ export interface ValidationOptions {
   requireNonEmpty?: boolean;
 }
 
-export class ValidateFormFields {
+export class ValidationFormFields {
   /**
    * Validates an input string based on the provided validation options.
    * @param input - The input string to validate.
@@ -64,7 +64,7 @@ export class ValidateFormFields {
    */
   static attachValidation(inputElement: HTMLInputElement, options: ValidationOptions): void {
     inputElement.addEventListener('input', () => {
-      const errorMessage = ValidateFormFields.validateInputText(inputElement.value, options);
+      const errorMessage = ValidationFormFields.validateInputText(inputElement.value, options);
       inputElement.setCustomValidity(errorMessage);
       inputElement.reportValidity();
     });
@@ -78,7 +78,7 @@ export class ValidateFormFields {
   static validateFields(selector: string, options: ValidationOptions): void {
     const inputs = document.querySelectorAll<HTMLInputElement>(selector);
     inputs.forEach(input => {
-      ValidateFormFields.attachValidation(input, options);
+      ValidationFormFields.attachValidation(input, options);
     });
   }
 }

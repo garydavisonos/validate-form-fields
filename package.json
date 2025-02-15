@@ -1,5 +1,5 @@
 {
-  "name": "validate-form-fields",
+  "name": "validation-form-fields",
   "version": "1.0.0",
   "description": "A lightweight, zero-dependency JavaScript/TypeScript library for validating form inputs with customisable rules. Supports length limits, alphanumeric enforcement, HTML blocking, and more.",
   "main": "index.js",
@@ -9,12 +9,18 @@
     "lint": "eslint .",
     "prepare": "husky"
   },
+  "keywords": [
+    "JavaScript",
+    "TypeScript",
+    "validation",
+    "form"
+  ],
   "author": "Gary Davison",
   "license": "MIT",
-  "homepage": "https://github.com/garydavisonos/validate-form-fields#readme",
+  "homepage": "https://github.com/garydavisonos/validation-form-fields#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/garydavisonos/validate-form-fields.git"
+    "url": "git+https://github.com/garydavisonos/validation-form-fields.git"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
@@ -26,5 +32,8 @@
     "jest-environment-jsdom": "^29.7.0",
     "ts-jest": "^29.2.5",
     "typescript": "^5.7.3"
+  },
+  "bugs": {
+    "url": "https://github.com/garydavisonos/validation-form-fields/issues"
   }
 }
