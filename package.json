@@ -1,13 +1,14 @@
 {
   "name": "validation-form-fields",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight, zero-dependency JavaScript/TypeScript library for validating form inputs with customisable rules. Supports length limits, alphanumeric enforcement, HTML blocking, and more.",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest",
     "lint": "eslint .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "postbuild": "mv dist/index.* ./"
   },
   "keywords": [
     "JavaScript",
@@ -35,5 +36,10 @@
   },
   "bugs": {
     "url": "https://github.com/garydavisonos/validation-form-fields/issues"
-  }
+  },
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "README.md"
+  ]
 }
