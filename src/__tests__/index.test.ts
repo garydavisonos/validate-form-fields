@@ -1,6 +1,6 @@
-import { ValidateFormFields, ValidationOptions } from '../index';
+import { ValidationFormFields, ValidationOptions } from '../index';
 
-describe('ValidateFormFields', () => {
+describe('ValidationFormFields', () => {
   let inputElement: HTMLInputElement;
 
   beforeEach(() => {
@@ -14,37 +14,37 @@ describe('ValidateFormFields', () => {
 
   test('should validate input text with minLength', () => {
     const options: ValidationOptions = { minLength: 5 };
-    const errorMessage = ValidateFormFields.validateInputText('abc', options);
+    const errorMessage = ValidationFormFields.validateInputText('abc', options);
     expect(errorMessage).toBe('Input must be at least 5 characters.');
   });
 
   test('should validate input text with maxLength', () => {
     const options: ValidationOptions = { maxLength: 5 };
-    const errorMessage = ValidateFormFields.validateInputText('abcdef', options);
+    const errorMessage = ValidationFormFields.validateInputText('abcdef', options);
     expect(errorMessage).toBe('Input must be no more than 5 characters.');
   });
 
   test('should validate input text with allowAlphanumericOnly', () => {
     const options: ValidationOptions = { allowAlphanumericOnly: true };
-    const errorMessage = ValidateFormFields.validateInputText('abc@123', options);
+    const errorMessage = ValidationFormFields.validateInputText('abc@123', options);
     expect(errorMessage).toBe('Input must only contain letters, numbers, hyphens (-), or underscores (_).');
   });
 
   test('should validate input text with blockHTML', () => {
     const options: ValidationOptions = { blockHTML: true, allowAlphanumericOnly: false };
-    const errorMessage = ValidateFormFields.validateInputText('<div>', options);
+    const errorMessage = ValidationFormFields.validateInputText('<div>', options);
     expect(errorMessage).toBe('Input cannot contain HTML characters like <, >, &, ", \', or /.');
   });
 
   test('should validate input text with requireNonEmpty', () => {
     const options: ValidationOptions = { requireNonEmpty: true };
-    const errorMessage = ValidateFormFields.validateInputText('', options);
+    const errorMessage = ValidationFormFields.validateInputText('', options);
     expect(errorMessage).toBe('Input cannot be empty.');
   });
 
   test('should attach validation to input element', () => {
     const options: ValidationOptions = { minLength: 5 };
-    ValidateFormFields.attachValidation(inputElement, options);
+    ValidationFormFields.attachValidation(inputElement, options);
     inputElement.value = 'abc';
     inputElement.dispatchEvent(new Event('input'));
     expect(inputElement.validationMessage).toBe('Input must be at least 5 characters.');
@@ -57,7 +57,7 @@ describe('ValidateFormFields', () => {
     inputElement2.classList.add('test-input');
     document.body.appendChild(inputElement2);
 
-    ValidateFormFields.validateFields('.test-input', options);
+    ValidationFormFields.validateFields('.test-input', options);
 
     inputElement.value = 'abc';
     inputElement2.value = 'abc';

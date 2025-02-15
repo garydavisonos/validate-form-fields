@@ -1,4 +1,4 @@
-# Validate Form Fields
+# Validation Form Fields
 A lightweight, zero-dependency JavaScript/TypeScript library for validating form inputs with customisable rules. Supports length limits, alphanumeric enforcement, HTML blocking, and more.
 
 ## Table of Contents
@@ -12,7 +12,7 @@ A lightweight, zero-dependency JavaScript/TypeScript library for validating form
 To install the library, you can use npm or yarn:
 
 ```bash
-npm install validate-form-fields
+npm install validation-form-fields
 ```
 
 ## Usage
@@ -20,12 +20,12 @@ npm install validate-form-fields
 Basic examples:
 
 ```JavaScript 
-import  { ValidateFormFields } from 'validate-form-fields';
+import  { ValidationFormFields } from 'validation-form-fields';
 
   useEffect(() => {
     const input = document.getElementById('name') as HTMLInputElement;
     if (input){
-      ValidateFormFields.attachValidation(input, {
+      ValidationFormFields.attachValidation(input, {
         minLength: 3,
         maxLength: 255,
         allowAlphanumericOnly: true,
@@ -37,11 +37,11 @@ import  { ValidateFormFields } from 'validate-form-fields';
 ```
 
 ```JavaScript 
-import  { ValidateFormFields } from 'validate-form-fields';
+import  { ValidationFormFields } from 'validation-form-fields';
 
 const input = document.getElementById('name');
 if (input){
-    ValidateFormFields.attachValidation(input, {
+    ValidationFormFields.attachValidation(input, {
     minLength: 3,
     maxLength: 255,
     allowAlphanumericOnly: true,
